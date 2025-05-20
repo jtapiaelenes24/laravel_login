@@ -13,7 +13,7 @@
             <a href="" class="text-slate-500 hover:text-slate-700">Regístrese aquí</a>
         </p>
 
-        <form action="" method="POST" class="bg-white px-5 p-6">
+        <form action="{{ route('login.login') }}" method="POST" class="bg-white px-5 p-6">
 
             @csrf
 

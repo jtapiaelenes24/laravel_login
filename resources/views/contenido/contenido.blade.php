@@ -8,7 +8,7 @@
         <h1 class="text-center text-3xl text-orange-600 mb-3">Contenido Principal</h1>
         <hr class="border-4 border-solid border-orange-700 mb-5">
 
-        <a href="" class="float-right hover:underline">
+        <a href="{{ route('logout.destroy') }}" class="float-right hover:underline">
             Cerrar Sesión
         </a>
 
