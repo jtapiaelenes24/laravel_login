@@ -8,9 +8,9 @@
         <h1 class="text-center text-3xl text-orange-600 mb-3">Contenido Principal</h1>
         <hr class="border-4 border-solid border-orange-700 mb-5">
 
-        <a href="{{ route('logout.destroy') }}" class="float-right hover:underline">
-            Cerrar Sesión
-        </a>
+        @auth
+            <p class="text-blue-500 text-lg">Bienvenido <span class="text-purple-500 text-lg">{{ Auth::user()->name }}</span></p>
+        @endauth
 
         <p class="bg-white px-5 p-6 mt-5 mb-7 leading-7">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ut quos harum tempore enim sit sed
@@ -22,6 +22,10 @@
             minus cupiditate saepe iure enim, veritatis officia iste quasi ullam! Cumque, officiis. Cupiditate, nesciunt
             error!
         </p>
+
+        <a href="{{ route('logout.destroy') }}" class="text-red-500 text-xl float-right hover:underline">
+            Cerrar Sesión
+        </a>
 
     </div>
 

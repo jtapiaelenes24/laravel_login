@@ -10,7 +10,7 @@
 
         <p class="text-center text-lg text-orange-400 mb-4">
             ¿No tienes una cuenta?
-            <a href="" class="text-slate-500 hover:text-slate-700">Regístrese aquí</a>
+            <a href="{{ route('registrate') }}" class="text-slate-500 hover:text-slate-700">Regístrese aquí</a>
         </p>
 
         <form action="{{ route('login.login') }}" method="POST" class="bg-white px-5 p-6">
@@ -31,6 +31,9 @@
                 Regístrate
             </button>
 
+            @error('email')
+                <div class="bg-red-900 text-white p-1 text-center mt-3">Error: {{ $message }}</div>
+            @enderror
 
         </form>
     </div>
